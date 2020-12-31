@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="pc.css">
     <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript"> 
+        $(window).resize(function (){
+            var width_size = window.outerWidth;
+            var ratio = window.devicePixelRatio;
+            if(ratio >= 1.5){
+                location.href = 'index_mobile.html';
+            }
+            else{
+                if (width_size <= 950) {
+                    location.href = 'index_mobile.html';
+                }
+            }
+        })
+    </script>   
 </head>
 
 <body>
@@ -275,22 +290,6 @@
     $( window ).resize(function() {
         //창크기 변화 감지
     });
-    
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script type="text/javascript"> 
-        $(window).resize(function (){
-            var width_size = window.outerWidth;
-            var ratio = window.devicePixelRatio;
-            if(ratio >= 1.5){
-                location.href = 'index_mobile.html';
-            }
-            else{
-                if (width_size <= 950) {
-                    location.href = 'index_mobile.html';
-                }
-            }
-        })
-    </script>
 
 </body>
 </html>
